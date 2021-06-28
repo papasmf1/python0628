@@ -1,0 +1,8 @@
+# 아나콘다 노트북에서 실행한다. 
+# 또는 pip install pilow로 설치해도 된다. 
+
+from PIL import Image
+img = Image.open("c:\\work\\basic01.jpg")
+img.show()
+print(img.size)
+print(img.format)
