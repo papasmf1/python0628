@@ -41,3 +41,33 @@ def change(x):
 wordlist = ["J","A","M"]
 change(wordlist)
 print(wordlist)
+
+#불변형식의 전역변수를 함수 내부에서 읽기+쓰기
+g = 1 
+def testScope(a):
+    #global g 
+    g = 2 
+    return a+g 
+
+#함수호출
+print( testScope(1) )
+print("함수 호출후:", g)
+
+#기본값 셋팅(default value)
+def times(a=10, b=20):
+    return a*b 
+
+#호출
+print( times() )
+print( times(5) )
+print( times(5,6) )
+
+#키워드 인자(파라메터명을 기술)
+def connectURI(server, port):
+    str = "http://" + server + ":" + port 
+    return str 
+
+#호출
+print( connectURI("credu.com", "80") )
+print( connectURI(port="80", server="credu.com") )
+
