@@ -12,7 +12,12 @@ print( f.read() )
 print( f.tell() )
 #리셋
 f.seek(0)
-print(f.readline()) 
-print(f.readline()) 
+print(f.readline(), end="") 
+print(f.readline(), end="") 
+print("---리스트로 리턴---")
+f.seek(0)
+result = f.readlines() 
+print(result)
+f.close() 
 
 
