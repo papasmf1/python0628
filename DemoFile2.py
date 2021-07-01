@@ -21,3 +21,22 @@ print(result)
 f.close() 
 
 
+#파일에 영구적으로 저장할 경우
+import pickle
+
+colors = ["red","blue","green"]
+print(colors)
+
+f = open("c:/work/colors", "wb")
+pickle.dump(colors, f)
+f.close()
+
+del colors 
+#print("colors:", colors)
+
+#다시 파일에서 복구 
+f = open("c:/work/colors", "rb")
+colors = pickle.load(f)
+print(colors)
+f.close() 
+
